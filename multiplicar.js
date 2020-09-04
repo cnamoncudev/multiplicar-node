@@ -1,7 +1,9 @@
 const { resolve } = require("path");
 const { rejects } = require("assert");
 
+
 const fs = require('fs');
+const colors=require('colors');
 
 let crearArchivo = (base,limite=10) =>{
     return new Promise ((resolve,reject)=>{
@@ -29,6 +31,7 @@ let crearArchivo = (base,limite=10) =>{
 
 let listarTabla = (base,limite=10)=>{
     let data ='';
+    
     for (let index = 1; index <=limite; index++) {
         data += `${base} * ${index} = ${base * index}\n `;
         console.log(data);
